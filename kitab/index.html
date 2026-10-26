@@ -4,47 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Koleksi Kitab Klasik | Daarul Azmi</title>
-    <meta name="description" content="Koleksi kitab klasik Islam yang bisa diunduh dan dipelajari di Pondok Pesantren Daarul Azmi." />
+    <meta name="description" content="Koleksi kitab klasik Islam milik Pondok Pesantren Daarul Azmi, siap dipelajari dan diunduh dari sumber publik yang legal." />
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@600;700&display=swap');
+
       :root {
         --navy: #123c62;
         --navy-deep: #0d2b48;
         --gold: #d9ac55;
-        --paper: #f6f7f5;
+        --gold-soft: #f3d79d;
+        --paper: #f4f1ea;
+        --paper-2: #efece6;
         --white: #ffffff;
-        --ink: #1f2d3d;
-        --muted: #5f7181;
-        --line: #e7edf2;
-        --shadow: 0 18px 38px rgba(18, 60, 98, 0.08);
+        --ink: #1c2b39;
+        --muted: #586c7d;
+        --line: #e7e0d4;
+        --shadow: 0 22px 50px rgba(15, 38, 60, 0.1);
       }
 
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
-        background: linear-gradient(180deg, #f7f7f5 0%, #f0f5f7 100%);
         color: var(--ink);
-        font-family: Arial, Helvetica, sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(217, 172, 85, 0.08), transparent 28%),
+          linear-gradient(180deg, #faf7f2 0%, #f2efe9 100%);
+        font-family: 'Inter', Arial, sans-serif;
       }
       a { color: inherit; text-decoration: none; }
       img { display: block; max-width: 100%; }
       button, input { font: inherit; }
-      .wrap { width: min(1200px, calc(100% - 32px)); margin: 0 auto; }
+
+      .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
 
       .topbar {
-        background: linear-gradient(135deg, var(--navy), var(--navy-deep));
-        color: white;
-        padding: 18px 0;
         position: sticky;
         top: 0;
-        z-index: 20;
-        box-shadow: 0 8px 22px rgba(13, 43, 72, 0.12);
+        z-index: 30;
+        background: rgba(13, 43, 72, 0.88);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
       }
       .topbar-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 16px;
+        min-height: 74px;
       }
       .brand {
         display: flex;
@@ -53,13 +60,13 @@
         color: white;
         font-weight: 800;
         font-size: 22px;
-        line-height: 1.1;
+        letter-spacing: -0.04em;
       }
       .brand small {
-        font-size: 11px;
-        letter-spacing: 0.12em;
+        font-size: 10px;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
-        opacity: 0.9;
+        opacity: 0.85;
       }
       .header-links {
         display: flex;
@@ -68,156 +75,234 @@
         flex-wrap: wrap;
       }
       .header-links a {
-        color: white;
-        background: rgba(255,255,255,0.08);
-        border: 1px solid rgba(255,255,255,0.15);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
         border-radius: 999px;
-        padding: 8px 14px;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.13);
+        color: white;
         font-size: 12px;
         font-weight: 700;
       }
 
       .hero {
-        background: linear-gradient(135deg, #102d4a 0%, #143d63 100%);
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(120deg, rgba(11, 31, 50, 0.95), rgba(18, 60, 98, 0.88)),
+          url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
         color: white;
-        padding: 58px 0 42px;
+        padding: 88px 0 68px;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -120px -120px auto;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(243, 215, 157, 0.22), transparent 62%);
       }
       .hero-grid {
         display: grid;
-        grid-template-columns: 1.5fr 0.8fr;
-        gap: 28px;
+        grid-template-columns: 1.4fr 0.8fr;
+        gap: 32px;
         align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.12);
+        color: #f3d79d;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
       }
       .hero h1 {
-        margin: 0 0 14px;
-        font-size: clamp(32px, 4vw, 56px);
-        line-height: 1.08;
+        margin: 20px 0 12px;
+        font-size: clamp(38px, 5vw, 72px);
+        line-height: 0.96;
+        letter-spacing: -0.06em;
+        font-weight: 800;
       }
       .hero p {
         margin: 0;
-        color: #dfeaf4;
+        color: rgba(255,255,255,0.78);
         line-height: 1.8;
+        font-size: 16px;
         max-width: 700px;
       }
-      .hero-box {
-        background: rgba(255,255,255,0.07);
+
+      .hero-panel {
+        background: rgba(255,255,255,0.06);
         border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 22px;
-        padding: 26px 22px;
+        border-radius: 24px;
+        padding: 22px;
+        box-shadow: 0 18px 38px rgba(9, 18, 27, 0.25);
       }
-      .hero-box .big {
+      .stat-number {
         display: block;
-        font-size: 42px;
         font-weight: 800;
-        color: #f3d188;
+        font-size: clamp(44px, 5vw, 64px);
         line-height: 1;
+        color: #f4d992;
+        letter-spacing: -0.06em;
       }
-      .hero-box .small {
-        margin-top: 10px;
-        color: #dfeaf4;
+      .stat-label {
+        margin-top: 12px;
+        color: rgba(255,255,255,0.8);
         line-height: 1.7;
+        font-size: 14px;
+      }
+      .hero-actions {
+        margin-top: 18px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .hero-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 12px;
         font-size: 13px;
+        font-weight: 800;
+      }
+      .hero-btn.primary {
+        background: var(--gold);
+        color: #1f2b36;
+      }
+      .hero-btn.secondary {
+        color: white;
+        border: 1px solid rgba(255,255,255,0.18);
+        background: rgba(255,255,255,0.06);
       }
 
-      .section-wrap { padding: 48px 0 72px; }
+      .content {
+        padding: 56px 0 96px;
+      }
       .toolbar {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 16px;
+        gap: 18px;
         flex-wrap: wrap;
-        margin-bottom: 22px;
+        margin-bottom: 28px;
       }
-      .search-wrap {
-        flex: 1 1 320px;
+      .search-box {
+        position: relative;
+        flex: 1 1 360px;
         max-width: 520px;
       }
-      .search-wrap input {
+      .search-box input {
         width: 100%;
-        border: 1px solid var(--line);
-        background: var(--white);
-        border-radius: 12px;
-        padding: 13px 16px;
+        border: 1px solid rgba(18, 60, 98, 0.12);
+        background: rgba(255,255,255,0.8);
+        border-radius: 14px;
+        box-shadow: 0 10px 24px rgba(18, 60, 98, 0.04);
+        padding: 15px 18px 15px 48px;
         color: var(--ink);
-        box-shadow: 0 6px 16px rgba(18, 60, 98, 0.04);
         outline: none;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        font-size: 15px;
       }
-      .search-wrap input:focus {
-        border-color: var(--navy);
-        box-shadow: 0 0 0 4px rgba(18, 60, 98, 0.08);
+      .search-box input:focus {
+        border-color: rgba(18,60,98,0.28);
+        box-shadow: 0 0 0 4px rgba(18,60,98,0.06);
+      }
+      .search-icon {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--muted);
+        font-size: 18px;
       }
       .category-tabs {
         display: flex;
-        gap: 10px;
         flex-wrap: wrap;
+        gap: 10px;
       }
       .tab {
-        border: 1px solid var(--line);
-        background: var(--white);
+        border: 1px solid rgba(18, 60, 98, 0.12);
+        background: rgba(255,255,255,0.68);
         color: var(--navy);
         border-radius: 999px;
-        padding: 10px 16px;
+        padding: 10px 14px;
         font-size: 12px;
-        font-weight: 800;
+        font-weight: 700;
         cursor: pointer;
         transition: all 0.2s ease;
       }
       .tab:hover { transform: translateY(-1px); }
       .tab.active {
         background: var(--navy);
-        color: white;
         border-color: var(--navy);
+        color: white;
       }
       .counter {
-        background: var(--white);
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 9px 14px;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 10px 24px rgba(18, 60, 98, 0.04);
+        border: 1px solid rgba(18,60,98,0.08);
         color: var(--navy);
+        border-radius: 999px;
+        padding: 10px 14px;
         font-size: 12px;
         font-weight: 800;
       }
 
       .book-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+        gap: 22px;
       }
       .book-card {
-        background: var(--white);
-        border: 1px solid var(--line);
-        border-radius: 18px;
+        position: relative;
+        background: rgba(255,255,255,0.75);
+        border: 1px solid rgba(18, 60, 98, 0.08);
+        border-radius: 22px;
         overflow: hidden;
         box-shadow: var(--shadow);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
       }
       .book-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 22px 42px rgba(18,60,98,0.1);
+        transform: translateY(-5px);
+        box-shadow: 0 28px 60px rgba(15, 38, 60, 0.12);
       }
       .book-cover {
         width: 100%;
-        height: 240px;
+        height: 260px;
         object-fit: cover;
-        background: #dfeaf1;
+        display: block;
       }
-      .book-content { padding: 18px 18px 20px; }
-      .book-category {
+      .book-body {
+        padding: 18px 18px 20px;
+      }
+      .book-badge {
+        display: inline-block;
         color: var(--gold);
         font-size: 10px;
         font-weight: 800;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
       }
       .book-card h3 {
-        margin: 10px 0 8px;
-        font-size: 22px;
+        margin: 12px 0 8px;
+        font-size: 1.35rem;
         line-height: 1.25;
-        color: var(--ink);
+        letter-spacing: -0.04em;
       }
       .book-author {
-        margin: 0 0 10px;
+        margin: 0 0 12px;
         color: var(--muted);
         font-size: 13px;
         font-weight: 700;
@@ -225,23 +310,22 @@
       .book-desc {
         margin: 0 0 18px;
         color: var(--muted);
-        font-size: 13px;
         line-height: 1.7;
+        font-size: 13px;
       }
       .book-actions {
         display: flex;
-        gap: 10px;
         flex-wrap: wrap;
+        gap: 10px;
       }
       .btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 10px 14px;
+        padding: 11px 14px;
         border-radius: 10px;
-        font-size: 12px;
         font-weight: 800;
-        cursor: pointer;
+        font-size: 12px;
         transition: transform 0.2s ease;
       }
       .btn:hover { transform: translateY(-1px); }
@@ -252,19 +336,24 @@
       .btn-secondary {
         background: #edf3fa;
         color: var(--navy);
-        border: 1px solid #dfeaf1;
+        border: 1px solid rgba(18,60,98,0.06);
       }
 
       .empty-state {
-        background: var(--white);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        padding: 26px 20px;
+        width: 100%;
+        background: rgba(255,255,255,0.8);
+        border: 1px solid rgba(18,60,98,0.08);
+        border-radius: 22px;
+        padding: 28px 20px;
+        box-shadow: var(--shadow);
         color: var(--muted);
       }
+      .empty-state h3 { margin: 0 0 8px; color: var(--ink); }
 
       @media (max-width: 760px) {
         .hero-grid { grid-template-columns: 1fr; }
+        .topbar-inner { min-height: 68px; }
+        .brand { font-size: 18px; }
       }
     </style>
   </head>
@@ -273,7 +362,7 @@
       <div class="wrap topbar-inner">
         <div class="brand">
           Daarul Azmi
-          <small>Koleksi Kitab Klasik</small>
+          <small>Koleksi kitab klasik</small>
         </div>
         <div class="header-links">
           <a href="/kitab/">Kitab</a>
@@ -285,29 +374,37 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <h1>Koleksi kitab klasik Islam</h1>
+          <span class="eyebrow">Daarul Azmi Library</span>
+          <h1>Koleksi kitab klasik Islam.</h1>
           <p>
-            Kumpulan kitab klasik yang menjadi rujukan kajian, bacaan, dan pembelajaran di Pondok Pesantren Daarul Azmi.
-            Semua link download diarahkan ke sumber publik yang legal dan terbuka, agar tetap aman, mudah diakses, dan bermanfaat bagi santri maupun umumnya.
+            Kumpulan kitab pilihan yang menjadi rujukan kajian, pembelajaran, dan pengembangan keilmuan di Pondok Pesantren Daarul Azmi.
+            Semua tautan download diarahkan ke sumber publik yang legal dan terbuka agar tetap aman, mudah diakses, dan bermanfaat bagi santri serta pembaca umum.
           </p>
+          <div class="hero-actions">
+            <a class="hero-btn primary" href="#library">Lihat katalog</a>
+            <a class="hero-btn secondary" href="https://archive.org/" target="_blank" rel="noreferrer">Sumber publik</a>
+          </div>
         </div>
-        <div class="hero-box">
-          <span class="big" id="totalBooks">0</span>
-          <div class="small">
-            Judul kitab tersedia dalam katalog. Semua link download diarahkan ke sumber publik seperti Archive.org agar aman, legal, dan mudah diakses.
+
+        <div class="hero-panel">
+          <span class="stat-number" id="totalBooks">0</span>
+          <div class="stat-label">
+            judul kitab tersedia dalam katalog, dengan sumber download yang aman dan legal dari archive.org.
           </div>
         </div>
       </div>
     </section>
 
-    <main class="wrap section-wrap">
+    <main class="content wrap" id="library">
       <div class="toolbar">
-        <div class="search-wrap">
-          <input id="searchInput" type="search" placeholder="Cari judul kitab, pengarang, atau kategori..." aria-label="Cari kitab" />
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input id="searchInput" type="search" placeholder="Cari judul, pengarang, atau kategori..." aria-label="Cari kitab" />
         </div>
         <div id="categoryTabs" class="category-tabs" aria-label="Filter kategori"></div>
         <div id="bookCount" class="counter">0 kitab</div>
       </div>
+
       <section id="bookGrid" class="book-grid"></section>
     </main>
 
@@ -341,6 +438,7 @@
 
       function renderBooks() {
         const keyword = searchInput.value.trim().toLowerCase();
+
         const filtered = allBooks.filter((book) => {
           const matchKeyword = !keyword ||
             book.title.toLowerCase().includes(keyword) ||
@@ -357,7 +455,7 @@
           bookGrid.innerHTML = `
             <div class="empty-state">
               <h3>Kitab tidak ditemukan.</h3>
-              <p>Coba cari kata lain atau ubah kategori untuk melihat daftar kitab lainnya.</p>
+              <p>Coba gunakan kata kunci lain atau ubah kategori untuk melihat judul lainnya.</p>
             </div>
           `;
           bookCount.textContent = '0 kitab';
@@ -369,8 +467,8 @@
           card.className = 'book-card';
           card.innerHTML = `
             <img src="${book.cover}" class="book-cover" alt="${book.title}" />
-            <div class="book-content">
-              <div class="book-category">${book.category}</div>
+            <div class="book-body">
+              <span class="book-badge">${book.category}</span>
               <h3>${book.title}</h3>
               <p class="book-author">Penulis: ${book.author}</p>
               <p class="book-desc">${book.description}</p>
@@ -398,8 +496,7 @@
           const items = Array.isArray(data) ? data : (data.books || []);
           allBooks = items;
           totalBooks.textContent = items.length;
-          const uniqueCategories = [...new Set(items.map((item) => item.category))];
-          renderTabs(uniqueCategories);
+          renderTabs([...new Set(items.map((item) => item.category))]);
           renderBooks();
         })
         .catch((error) => {
