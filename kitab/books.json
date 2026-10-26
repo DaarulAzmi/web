@@ -103,6 +103,149 @@
         { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Mukhtarul%20Ahadits" },
         { "label": "Sumber Publik", "url": "https://archive.org/" }
       ]
+    },
+    {
+      "slug": "fathul-qorib",
+      "title": "Fathul Qorib",
+      "author": "Syaikh Ibnu Qasim al-Ghazzi",
+      "category": "Fiqh",
+      "cover": "https://images.unsplash.com/photo-1524578271613-d550eacf6090?auto=format&fit=crop&w=900&q=80",
+      "description": "Kitab fiqh yang ringkas namun lengkap untuk memahami ibadah dan tata cara kesehatan spiritual dalam keseharian.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Fathul%20Qorib%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Fathul%20Qorib" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "taqrib",
+      "title": "Taqrib",
+      "author": "Imam Abu Syuja' al-Asfahani",
+      "category": "Hadits",
+      "cover": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=900&q=80",
+      "description": "Ringkasan hadits yang sangat populer sebagai pegangan awal dalam mempelajari ilmu hadits dan fikih dasar.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Taqrib%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Taqrib%20hadits" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "arba-in-nawawi",
+      "title": "Arba'in Nawawi",
+      "author": "Imam an-Nawawi",
+      "category": "Hadits",
+      "cover": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
+      "description": "Empat puluh hadits pilihan yang menjelaskan pokok-pokok ajaran Islam dalam bahasa yang mudah dicerna.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Arba%27in%20Nawawi%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Arba%27in%20Nawawi" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "kitab-tauhid",
+      "title": "Kitab Tauhid",
+      "author": "Syaikh Muhammad bin Abdul Wahhab",
+      "category": "Aqidah",
+      "cover": "https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=900&q=80",
+      "description": "Kitab yang membahas tauhid, keimanan, dan konsekuensi aqidah dalam kehidupan sehari-hari.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Kitab%20Tauhid%20Muhammad%20bin%20Abdul%20Wahhab%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Kitab%20Tauhid%20Muhammad%20bin%20Abdul%20Wahhab" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "minhajul-muslim",
+      "title": "Minhajul Muslim",
+      "author": "Abu Bakr Jassas (?)",
+      "category": "Akhlaq",
+      "cover": "https://images.unsplash.com/photo-1516979187454-8e94b84a3c44?auto=format&fit=crop&w=900&q=80",
+      "description": "Buku yang mengajak pembaca untuk memperbaiki akhlak dan menata kehidupan sesuai ajaran Islam.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Minhajul%20Muslim%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Minhajul%20Muslim" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "safinatun-najah",
+      "title": "Safinatun Najah",
+      "author": "Syaikh Salim bin Sumair al-Hadhrami",
+      "category": "Aqidah",
+      "cover": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=900&q=80",
+      "description": "Kitab aqidah yang ringkas, mudah dipahami, dan sangat cocok untuk kajian dasar keislaman.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Safinatun%20Najah%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Safinatun%20Najah" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "bidayatul-hidayah",
+      "title": "Bidayatul Hidayah",
+      "author": "Imam al-Ghazali",
+      "category": "Tasawuf",
+      "cover": "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=900&q=80",
+      "description": "Kitab yang membimbing manusia menuju jalan hidayah dengan akhlak dan penyucian jiwa.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Bidayatul%20Hidayah%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Bidayatul%20Hidayah" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "adabul-mufrad",
+      "title": "Adabul Mufrad",
+      "author": "Imam al-Bukhari",
+      "category": "Hadits",
+      "cover": "https://images.unsplash.com/photo-1517576840274-6b5c4a5a0c6b?auto=format&fit=crop&w=900&q=80",
+      "description": "Kumpulan hadits dan adab yang sangat cocok untuk menumbuhkan akhlak dan kebiasaan baik.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Adabul%20Mufrad%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Adabul%20Mufrad" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "fiqh-sunnah",
+      "title": "Fiqh Sunnah",
+      "author": "Sayyid Sabiq",
+      "category": "Fiqh",
+      "cover": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=900&q=80",
+      "description": "Kajian fiqh yang melihat praktik ibadah dan muamalah dari sudut sunnah Nabi secara sistematis.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Fiqh%20Sunnah%20Sayyid%20Sabiq%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Fiqh%20Sunnah%20Sayyid%20Sabiq" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "sharah-ibnu-asyir",
+      "title": "Syarah Ibnu 'Asyir",
+      "author": "Ibnu 'Asyir",
+      "category": "Nahwu",
+      "cover": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
+      "description": "Syarah kitab nahwu yang membantu memahami kaidah bahasa Arab secara lebih tajam dan praktis.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Syarah%20Ibnu%20Asyir%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Syarah%20Ibnu%20Asyir" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "syarh-ubudiyah",
+      "title": "Syarh Kitab Ubudiyah",
+      "author": "Syaikh Muhammad bin Shalih al-Utsaimin",
+      "category": "Fiqh",
+      "cover": "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=80",
+      "description": "Penjelasan mendalam tentang ibadah yang menjadikan pemahaman praktis dan efektif dalam kehidupan sehari-hari.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Syarh%20Kitab%20Ubudiyah%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Syarh%20Kitab%20Ubudiyah" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
     }
   ]
 }
