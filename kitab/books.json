@@ -1,0 +1,108 @@
+{
+  "books": [
+    {
+      "slug": "terjemah-nurul-yaqin",
+      "title": "Terjemah Nurul Yaqin",
+      "author": "Syaikh Muhammad bin Salim al-Bashri",
+      "category": "Aqidah",
+      "cover": "https://images.unsplash.com/photo-1516979187454-8e94b84a3c44?auto=format&fit=crop&w=900&q=80",
+      "description": "Kitab yang membahas akidah, sejarah Nabi, dan pemahaman dasar ajaran Islam dengan bahasa yang mudah dipahami.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Terjemah%20Nurul%20Yaqin%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Nurul%20Yaqin" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "riyadhus-shalihin",
+      "title": "Riyadhus Shalihin",
+      "author": "Imam an-Nawawi",
+      "category": "Akhlaq",
+      "cover": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80",
+      "description": "Kumpulan hadits tentang akhlak, ibadah, dan perilaku mulia yang sangat cocok untuk pembelajaran harian.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Riyadhus%20Shalihin%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Riyadhus%20Shalihin" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "bulughul-maram",
+      "title": "Bulughul Maram",
+      "author": "Ibn Hajar al-Asqalani",
+      "category": "Fiqh",
+      "cover": "https://images.unsplash.com/photo-1507842217343-583bb7270b7d?auto=format&fit=crop&w=900&q=80",
+      "description": "Kitab hadits fiqh yang sistematis dan sangat populer untuk kajian hukum ibadah dan muamalah.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Bulughul%20Maram%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Bulughul%20Maram" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "tafsir-jalalayn",
+      "title": "Tafsir Jalalayn",
+      "author": "Jalaluddin al-Mahalli & Jalaluddin al-Suyuthi",
+      "category": "Tafsir",
+      "cover": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80",
+      "description": "Kitab tafsir ringkas yang kaya makna dan sangat membantu dalam memahami ayat-ayat Al-Qur'an.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Tafsir%20Jalalayn%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Tafsir%20Jalalayn" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "alfiyah-ibn-malik",
+      "title": "Alfiyah Ibn Malik",
+      "author": "Ibn Malik",
+      "category": "Nahwu",
+      "cover": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+      "description": "Kitab nahwu yang menjadi dasar penting bagi santri dalam memahami kaidah bahasa Arab.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Alfiyah%20Ibn%20Malik%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Alfiyah%20Ibn%20Malik" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "jurumiyyah",
+      "title": "Jurumiyyah",
+      "author": "Ibn Aji",
+      "category": "Nahwu",
+      "cover": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+      "description": "Kitab nahwu yang ringkas dan sering dijadikan pijakan awal bagi pemula dalam mempelajari bahasa Arab.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Jurumiyyah%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Jurumiyyah" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "matan-ashmawi",
+      "title": "Matan Ashmawi",
+      "author": "Syaikh Ahmad bin Muhammad al-Ashmawi",
+      "category": "Shorof",
+      "cover": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+      "description": "Kitab shorof yang membantu santri memahami perubahan bentuk kata dalam bahasa Arab secara sistematis.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Matan%20Ashmawi%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Matan%20Ashmawi" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    },
+    {
+      "slug": "mukhtarul-ahadits",
+      "title": "Mukhtarul Ahadits",
+      "author": "Syaikh Muhammad bin Abdul Wahhab",
+      "category": "Hadits",
+      "cover": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+      "description": "Koleksi hadits pilihan yang memudahkan kajian ringkas dan efektif untuk pembelajaran dasar.",
+      "links": [
+        { "label": "Download PDF", "url": "https://archive.org/search.php?query=Mukhtarul%20Ahadits%20pdf" },
+        { "label": "Mirror Link", "url": "https://archive.org/search.php?query=Mukhtarul%20Ahadits" },
+        { "label": "Sumber Publik", "url": "https://archive.org/" }
+      ]
+    }
+  ]
+}
