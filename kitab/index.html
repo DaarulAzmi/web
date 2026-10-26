@@ -20,8 +20,8 @@
         --white: #ffffff;
         --ink: #1c2d3c;
         --muted: #5f7181;
-        --line: #e8dcc7;
-        --shadow: 0 22px 48px rgba(13, 35, 56, 0.08);
+        --line: #eadfc5;
+        --shadow: 0 26px 60px rgba(13, 35, 56, 0.10);
       }
 
       * { box-sizing: border-box; }
@@ -46,7 +46,7 @@
         z-index: 40;
         background: rgba(13,43,72,0.88);
         backdrop-filter: blur(14px);
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255,255,255,0.10);
       }
       .topbar-inner {
         display: flex;
@@ -93,17 +93,23 @@
           linear-gradient(120deg, rgba(11,31,50,0.96), rgba(18,60,98,0.88)),
           url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
         color: white;
-        padding: 88px 0 72px;
+        padding: 90px 0 72px;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(18,60,98,0.80), rgba(18,60,98,0.25));
       }
       .hero::after {
         content: "";
         position: absolute;
-        right: -100px;
-        bottom: -110px;
+        right: -120px;
+        bottom: -100px;
         width: 360px;
         height: 360px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(217,172,85,0.28), transparent 62%);
+        background: radial-gradient(circle, rgba(217,172,85,0.26), transparent 62%);
       }
       .hero-grid {
         position: relative;
@@ -205,12 +211,11 @@
       }
       .search-box input {
         width: 100%;
-        border: 1px solid rgba(18,60,98,0.12);
-        background: rgba(255,255,255,0.84);
         border-radius: 14px;
         box-shadow: 0 10px 24px rgba(18,60,98,0.04);
         padding: 15px 18px 15px 48px;
-        border: 1px solid rgba(18,60,98,0.1);
+        border: 1px solid rgba(18,60,98,0.10);
+        background: rgba(255,255,255,0.84);
         color: var(--ink);
         outline: none;
         font-size: 15px;
