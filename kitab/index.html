@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Koleksi Kitab Klasik | Daarul Azmi</title>
+    <meta name="description" content="Koleksi kitab klasik Islam yang bisa diunduh dan dipelajari di Pondok Pesantren Daarul Azmi." />
     <style>
       :root {
         --navy: #123c62;
@@ -11,21 +12,25 @@
         --gold: #d9ac55;
         --paper: #f6f7f5;
         --white: #ffffff;
-        --ink: #1e2b39;
+        --ink: #1f2d3d;
         --muted: #5f7181;
         --line: #e7edf2;
+        --shadow: 0 18px 38px rgba(18, 60, 98, 0.08);
       }
+
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
-        background: var(--paper);
+        background: linear-gradient(180deg, #f7f7f5 0%, #f0f5f7 100%);
         color: var(--ink);
-        font-family: Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
       }
-      a { text-decoration: none; }
+      a { color: inherit; text-decoration: none; }
       img { display: block; max-width: 100%; }
-      .wrap { width: min(1200px, calc(100% - 30px)); margin: 0 auto; }
+      button, input { font: inherit; }
+      .wrap { width: min(1200px, calc(100% - 32px)); margin: 0 auto; }
+
       .topbar {
         background: linear-gradient(135deg, var(--navy), var(--navy-deep));
         color: white;
@@ -33,6 +38,7 @@
         position: sticky;
         top: 0;
         z-index: 20;
+        box-shadow: 0 8px 22px rgba(13, 43, 72, 0.12);
       }
       .topbar-inner {
         display: flex;
@@ -40,65 +46,80 @@
         justify-content: space-between;
         gap: 16px;
       }
-      .brand { color: white; font-weight: 800; font-size: 20px; }
+      .brand {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        color: white;
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 1.1;
+      }
       .brand small {
-        display: block;
         font-size: 11px;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         opacity: 0.9;
       }
-      .header-links { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+      .header-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
       .header-links a {
         color: white;
         background: rgba(255,255,255,0.08);
         border: 1px solid rgba(255,255,255,0.15);
         border-radius: 999px;
-        padding: 8px 12px;
+        padding: 8px 14px;
         font-size: 12px;
         font-weight: 700;
       }
+
       .hero {
-        background: linear-gradient(135deg, #0c2945 0%, #143d63 100%);
+        background: linear-gradient(135deg, #102d4a 0%, #143d63 100%);
         color: white;
-        padding: 52px 0 36px;
+        padding: 58px 0 42px;
       }
       .hero-grid {
         display: grid;
-        grid-template-columns: 1.3fr 0.7fr;
+        grid-template-columns: 1.5fr 0.8fr;
         gap: 28px;
         align-items: center;
       }
       .hero h1 {
-        margin: 0 0 12px;
-        font-size: clamp(30px, 4vw, 52px);
-        line-height: 1.1;
+        margin: 0 0 14px;
+        font-size: clamp(32px, 4vw, 56px);
+        line-height: 1.08;
       }
       .hero p {
         margin: 0;
-        line-height: 1.75;
         color: #dfeaf4;
+        line-height: 1.8;
         max-width: 700px;
       }
       .hero-box {
-        background: rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.07);
         border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 18px;
-        padding: 22px;
+        border-radius: 22px;
+        padding: 26px 22px;
       }
       .hero-box .big {
         display: block;
-        font-size: 35px;
+        font-size: 42px;
         font-weight: 800;
-        color: #f2cf88;
+        color: #f3d188;
+        line-height: 1;
       }
       .hero-box .small {
-        margin-top: 8px;
+        margin-top: 10px;
         color: #dfeaf4;
-        line-height: 1.65;
+        line-height: 1.7;
         font-size: 13px;
       }
-      .section-wrap { padding: 42px 0 72px; }
+
+      .section-wrap { padding: 48px 0 72px; }
       .toolbar {
         display: flex;
         align-items: center;
@@ -106,6 +127,25 @@
         gap: 16px;
         flex-wrap: wrap;
         margin-bottom: 22px;
+      }
+      .search-wrap {
+        flex: 1 1 320px;
+        max-width: 520px;
+      }
+      .search-wrap input {
+        width: 100%;
+        border: 1px solid var(--line);
+        background: var(--white);
+        border-radius: 12px;
+        padding: 13px 16px;
+        color: var(--ink);
+        box-shadow: 0 6px 16px rgba(18, 60, 98, 0.04);
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .search-wrap input:focus {
+        border-color: var(--navy);
+        box-shadow: 0 0 0 4px rgba(18, 60, 98, 0.08);
       }
       .category-tabs {
         display: flex;
@@ -117,11 +157,13 @@
         background: var(--white);
         color: var(--navy);
         border-radius: 999px;
-        padding: 10px 14px;
+        padding: 10px 16px;
         font-size: 12px;
         font-weight: 800;
         cursor: pointer;
+        transition: all 0.2s ease;
       }
+      .tab:hover { transform: translateY(-1px); }
       .tab.active {
         background: var(--navy);
         color: white;
@@ -136,22 +178,23 @@
         font-size: 12px;
         font-weight: 800;
       }
+
       .book-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
       }
       .book-card {
         background: var(--white);
         border: 1px solid var(--line);
-        border-radius: 16px;
+        border-radius: 18px;
         overflow: hidden;
-        box-shadow: 0 8px 24px rgba(18,60,98,0.06);
-        transition: transform .2s ease, box-shadow .2s ease;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
       .book-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 14px 32px rgba(18,60,98,0.09);
+        transform: translateY(-4px);
+        box-shadow: 0 22px 42px rgba(18,60,98,0.1);
       }
       .book-cover {
         width: 100%;
@@ -159,7 +202,7 @@
         object-fit: cover;
         background: #dfeaf1;
       }
-      .book-content { padding: 18px 16px 20px; }
+      .book-content { padding: 18px 18px 20px; }
       .book-category {
         color: var(--gold);
         font-size: 10px;
@@ -171,6 +214,7 @@
         margin: 10px 0 8px;
         font-size: 22px;
         line-height: 1.25;
+        color: var(--ink);
       }
       .book-author {
         margin: 0 0 10px;
@@ -198,13 +242,27 @@
         font-size: 12px;
         font-weight: 800;
         cursor: pointer;
+        transition: transform 0.2s ease;
       }
-      .btn-primary { background: var(--gold); color: #1d2b39; }
+      .btn:hover { transform: translateY(-1px); }
+      .btn-primary {
+        background: var(--gold);
+        color: #1d2b39;
+      }
       .btn-secondary {
         background: #edf3fa;
         color: var(--navy);
         border: 1px solid #dfeaf1;
       }
+
+      .empty-state {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 26px 20px;
+        color: var(--muted);
+      }
+
       @media (max-width: 760px) {
         .hero-grid { grid-template-columns: 1fr; }
       }
@@ -230,7 +288,7 @@
           <h1>Koleksi kitab klasik Islam</h1>
           <p>
             Kumpulan kitab klasik yang menjadi rujukan kajian, bacaan, dan pembelajaran di Pondok Pesantren Daarul Azmi.
-            Semua tautan download diarahkan ke sumber publik yang legal dan terbuka.
+            Semua link download diarahkan ke sumber publik yang legal dan terbuka, agar tetap aman, mudah diakses, dan bermanfaat bagi santri maupun umumnya.
           </p>
         </div>
         <div class="hero-box">
@@ -244,29 +302,35 @@
 
     <main class="wrap section-wrap">
       <div class="toolbar">
-        <div id="categoryTabs" class="category-tabs"></div>
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Cari judul kitab, pengarang, atau kategori..." aria-label="Cari kitab" />
+        </div>
+        <div id="categoryTabs" class="category-tabs" aria-label="Filter kategori"></div>
         <div id="bookCount" class="counter">0 kitab</div>
       </div>
       <section id="bookGrid" class="book-grid"></section>
     </main>
 
     <script>
-      const bookGrid = document.getElementById("bookGrid");
-      const categoryTabs = document.getElementById("categoryTabs");
-      const bookCount = document.getElementById("bookCount");
-      const totalBooks = document.getElementById("totalBooks");
+      const bookGrid = document.getElementById('bookGrid');
+      const categoryTabs = document.getElementById('categoryTabs');
+      const bookCount = document.getElementById('bookCount');
+      const totalBooks = document.getElementById('totalBooks');
+      const searchInput = document.getElementById('searchInput');
+
       let allBooks = [];
-      let activeCategory = "Semua";
+      let activeCategory = 'Semua';
 
       function renderTabs(items) {
-        const tabs = ["Semua", ...items];
-        categoryTabs.innerHTML = "";
+        const tabs = ['Semua', ...items];
+        categoryTabs.innerHTML = '';
+
         tabs.forEach((tab) => {
-          const button = document.createElement("button");
-          button.type = "button";
-          button.className = "tab" + (tab === activeCategory ? " active" : "");
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'tab' + (tab === activeCategory ? ' active' : '');
           button.textContent = tab;
-          button.addEventListener("click", () => {
+          button.addEventListener('click', () => {
             activeCategory = tab;
             renderBooks();
             renderTabs(items);
@@ -276,15 +340,33 @@
       }
 
       function renderBooks() {
-        const filtered = activeCategory === "Semua"
-          ? allBooks
-          : allBooks.filter(book => book.category === activeCategory);
+        const keyword = searchInput.value.trim().toLowerCase();
+        const filtered = allBooks.filter((book) => {
+          const matchKeyword = !keyword ||
+            book.title.toLowerCase().includes(keyword) ||
+            book.author.toLowerCase().includes(keyword) ||
+            book.category.toLowerCase().includes(keyword);
 
-        bookGrid.innerHTML = "";
+          const matchCategory = activeCategory === 'Semua' || book.category === activeCategory;
+          return matchKeyword && matchCategory;
+        });
+
+        bookGrid.innerHTML = '';
+
+        if (!filtered.length) {
+          bookGrid.innerHTML = `
+            <div class="empty-state">
+              <h3>Kitab tidak ditemukan.</h3>
+              <p>Coba cari kata lain atau ubah kategori untuk melihat daftar kitab lainnya.</p>
+            </div>
+          `;
+          bookCount.textContent = '0 kitab';
+          return;
+        }
 
         filtered.forEach((book) => {
-          const card = document.createElement("article");
-          card.className = "book-card";
+          const card = document.createElement('article');
+          card.className = 'book-card';
           card.innerHTML = `
             <img src="${book.cover}" class="book-cover" alt="${book.title}" />
             <div class="book-content">
@@ -299,8 +381,8 @@
             </div>
           `;
 
-          const detailButton = card.querySelector("[data-slug]");
-          detailButton.addEventListener("click", () => {
+          const detailButton = card.querySelector('[data-slug]');
+          detailButton.addEventListener('click', () => {
             window.location.href = `./detail.html?slug=${encodeURIComponent(book.slug)}`;
           });
 
@@ -310,24 +392,27 @@
         bookCount.textContent = `${filtered.length} kitab`;
       }
 
-      fetch("./books.json")
+      fetch('./books.json')
         .then((res) => res.json())
         .then((data) => {
           const items = Array.isArray(data) ? data : (data.books || []);
           allBooks = items;
           totalBooks.textContent = items.length;
-          renderTabs([...new Set(items.map(item => item.category))]);
+          const uniqueCategories = [...new Set(items.map((item) => item.category))];
+          renderTabs(uniqueCategories);
           renderBooks();
         })
         .catch((error) => {
           console.error(error);
           bookGrid.innerHTML = `
-            <div style="padding:20px; background:white; border:1px solid var(--line); border-radius:12px; width:100%;">
+            <div class="empty-state">
               <h3>Data kitab tidak tersedia.</h3>
               <p>Pastikan file <strong>books.json</strong> ada di folder yang sama.</p>
             </div>
           `;
         });
+
+      searchInput.addEventListener('input', renderBooks);
     </script>
   </body>
 </html>
