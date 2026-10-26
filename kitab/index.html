@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koleksi Kitab Klasik | Daarul Azmi</title>
+    <style>
+      :root {
+        --navy: #123c62;
+        --navy-deep: #0d2b48;
+        --gold: #d9ac55;
+        --paper: #f6f7f5;
+        --white: #ffffff;
+        --ink: #1e2b39;
+        --muted: #5f7181;
+        --line: #e7edf2;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Arial, sans-serif;
+      }
+      a { text-decoration: none; }
+      img { display: block; max-width: 100%; }
+      .wrap { width: min(1200px, calc(100% - 30px)); margin: 0 auto; }
+      .topbar {
+        background: linear-gradient(135deg, var(--navy), var(--navy-deep));
+        color: white;
+        padding: 18px 0;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand { color: white; font-weight: 800; font-size: 20px; }
+      .brand small {
+        display: block;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0.9;
+      }
+      .header-links { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+      .header-links a {
+        color: white;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .hero {
+        background: linear-gradient(135deg, #0c2945 0%, #143d63 100%);
+        color: white;
+        padding: 52px 0 36px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 28px;
+        align-items: center;
+      }
+      .hero h1 {
+        margin: 0 0 12px;
+        font-size: clamp(30px, 4vw, 52px);
+        line-height: 1.1;
+      }
+      .hero p {
+        margin: 0;
+        line-height: 1.75;
+        color: #dfeaf4;
+        max-width: 700px;
+      }
+      .hero-box {
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 18px;
+        padding: 22px;
+      }
+      .hero-box .big {
+        display: block;
+        font-size: 35px;
+        font-weight: 800;
+        color: #f2cf88;
+      }
+      .hero-box .small {
+        margin-top: 8px;
+        color: #dfeaf4;
+        line-height: 1.65;
+        font-size: 13px;
+      }
+      .section-wrap { padding: 42px 0 72px; }
+      .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 22px;
+      }
+      .category-tabs {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .tab {
+        border: 1px solid var(--line);
+        background: var(--white);
+        color: var(--navy);
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-size: 12px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .tab.active {
+        background: var(--navy);
+        color: white;
+        border-color: var(--navy);
+      }
+      .counter {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 9px 14px;
+        color: var(--navy);
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .book-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 22px;
+      }
+      .book-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(18,60,98,0.06);
+        transition: transform .2s ease, box-shadow .2s ease;
+      }
+      .book-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 32px rgba(18,60,98,0.09);
+      }
+      .book-cover {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        background: #dfeaf1;
+      }
+      .book-content { padding: 18px 16px 20px; }
+      .book-category {
+        color: var(--gold);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .book-card h3 {
+        margin: 10px 0 8px;
+        font-size: 22px;
+        line-height: 1.25;
+      }
+      .book-author {
+        margin: 0 0 10px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .book-desc {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+      .book-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .btn-primary { background: var(--gold); color: #1d2b39; }
+      .btn-secondary {
+        background: #edf3fa;
+        color: var(--navy);
+        border: 1px solid #dfeaf1;
+      }
+      @media (max-width: 760px) {
+        .hero-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <div class="brand">
+          Daarul Azmi
+          <small>Koleksi Kitab Klasik</small>
+        </div>
+        <div class="header-links">
+          <a href="/kitab/">Kitab</a>
+          <a href="/">Website Utama</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>Koleksi kitab klasik Islam</h1>
+          <p>
+            Kumpulan kitab klasik yang menjadi rujukan kajian, bacaan, dan pembelajaran di Pondok Pesantren Daarul Azmi.
+            Semua tautan download diarahkan ke sumber publik yang legal dan terbuka.
+          </p>
+        </div>
+        <div class="hero-box">
+          <span class="big" id="totalBooks">0</span>
+          <div class="small">
+            Judul kitab tersedia dalam katalog. Semua link download diarahkan ke sumber publik seperti Archive.org agar aman, legal, dan mudah diakses.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="wrap section-wrap">
+      <div class="toolbar">
+        <div id="categoryTabs" class="category-tabs"></div>
+        <div id="bookCount" class="counter">0 kitab</div>
+      </div>
+      <section id="bookGrid" class="book-grid"></section>
+    </main>
+
+    <script>
+      const bookGrid = document.getElementById("bookGrid");
+      const categoryTabs = document.getElementById("categoryTabs");
+      const bookCount = document.getElementById("bookCount");
+      const totalBooks = document.getElementById("totalBooks");
+      let allBooks = [];
+      let activeCategory = "Semua";
+
+      function renderTabs(items) {
+        const tabs = ["Semua", ...items];
+        categoryTabs.innerHTML = "";
+        tabs.forEach((tab) => {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "tab" + (tab === activeCategory ? " active" : "");
+          button.textContent = tab;
+          button.addEventListener("click", () => {
+            activeCategory = tab;
+            renderBooks();
+            renderTabs(items);
+          });
+          categoryTabs.appendChild(button);
+        });
+      }
+
+      function renderBooks() {
+        const filtered = activeCategory === "Semua"
+          ? allBooks
+          : allBooks.filter(book => book.category === activeCategory);
+
+        bookGrid.innerHTML = "";
+
+        filtered.forEach((book) => {
+          const card = document.createElement("article");
+          card.className = "book-card";
+          card.innerHTML = `
+            <img src="${book.cover}" class="book-cover" alt="${book.title}" />
+            <div class="book-content">
+              <div class="book-category">${book.category}</div>
+              <h3>${book.title}</h3>
+              <p class="book-author">Penulis: ${book.author}</p>
+              <p class="book-desc">${book.description}</p>
+              <div class="book-actions">
+                <button class="btn btn-primary" data-slug="${book.slug}">Lihat Detail</button>
+                <a class="btn btn-secondary" href="${book.links[0].url}" target="_blank" rel="noreferrer">Download</a>
+              </div>
+            </div>
+          `;
+
+          const detailButton = card.querySelector("[data-slug]");
+          detailButton.addEventListener("click", () => {
+            window.location.href = `./detail.html?slug=${encodeURIComponent(book.slug)}`;
+          });
+
+          bookGrid.appendChild(card);
+        });
+
+        bookCount.textContent = `${filtered.length} kitab`;
+      }
+
+      fetch("./books.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const items = Array.isArray(data) ? data : (data.books || []);
+          allBooks = items;
+          totalBooks.textContent = items.length;
+          renderTabs([...new Set(items.map(item => item.category))]);
+          renderBooks();
+        })
+        .catch((error) => {
+          console.error(error);
+          bookGrid.innerHTML = `
+            <div style="padding:20px; background:white; border:1px solid var(--line); border-radius:12px; width:100%;">
+              <h3>Data kitab tidak tersedia.</h3>
+              <p>Pastikan file <strong>books.json</strong> ada di folder yang sama.</p>
+            </div>
+          `;
+        });
+    </script>
+  </body>
+</html>
