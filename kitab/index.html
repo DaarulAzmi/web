@@ -11,47 +11,49 @@
       :root {
         --navy: #123c62;
         --navy-deep: #0d2b48;
+        --navy-soft: #1d4d78;
         --gold: #d9ac55;
-        --gold-soft: #f3d79d;
-        --paper: #f4f1ea;
-        --paper-2: #efece6;
+        --gold-soft: #f3d99a;
+        --cream: #f8f1e8;
+        --paper: #f5f0e7;
+        --paper-2: #efe8dd;
         --white: #ffffff;
-        --ink: #1c2b39;
-        --muted: #586c7d;
-        --line: #e7e0d4;
-        --shadow: 0 22px 50px rgba(15, 38, 60, 0.1);
+        --ink: #1c2d3c;
+        --muted: #5f7181;
+        --line: #e8dcc7;
+        --shadow: 0 22px 48px rgba(13, 35, 56, 0.08);
       }
 
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
-        color: var(--ink);
-        background:
-          radial-gradient(circle at top left, rgba(217, 172, 85, 0.08), transparent 28%),
-          linear-gradient(180deg, #faf7f2 0%, #f2efe9 100%);
         font-family: 'Inter', Arial, sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(217,172,85,0.12), transparent 28%),
+          linear-gradient(180deg, #faf8f4 0%, var(--paper) 100%);
+        color: var(--ink);
       }
-      a { color: inherit; text-decoration: none; }
+      a { text-decoration: none; color: inherit; }
       img { display: block; max-width: 100%; }
-      button, input { font: inherit; }
+      input, button { font: inherit; }
 
-      .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+      .wrap { width: min(1180px, calc(100% - 30px)); margin: 0 auto; }
 
       .topbar {
         position: sticky;
         top: 0;
-        z-index: 30;
-        background: rgba(13, 43, 72, 0.88);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(255,255,255,0.08);
+        z-index: 40;
+        background: rgba(13,43,72,0.88);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(255,255,255,0.1);
       }
       .topbar-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 16px;
         min-height: 74px;
+        gap: 18px;
       }
       .brand {
         display: flex;
@@ -59,8 +61,8 @@
         gap: 2px;
         color: white;
         font-weight: 800;
-        font-size: 22px;
         letter-spacing: -0.04em;
+        font-size: 22px;
       }
       .brand small {
         font-size: 10px;
@@ -71,18 +73,15 @@
       .header-links {
         display: flex;
         align-items: center;
-        gap: 10px;
         flex-wrap: wrap;
+        gap: 10px;
       }
       .header-links a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
         padding: 10px 16px;
         border-radius: 999px;
         background: rgba(255,255,255,0.08);
-        border: 1px solid rgba(255,255,255,0.13);
         color: white;
+        border: 1px solid rgba(255,255,255,0.12);
         font-size: 12px;
         font-weight: 700;
       }
@@ -91,44 +90,43 @@
         position: relative;
         overflow: hidden;
         background:
-          linear-gradient(120deg, rgba(11, 31, 50, 0.95), rgba(18, 60, 98, 0.88)),
+          linear-gradient(120deg, rgba(11,31,50,0.96), rgba(18,60,98,0.88)),
           url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
         color: white;
-        padding: 88px 0 68px;
+        padding: 88px 0 72px;
       }
       .hero::after {
         content: "";
         position: absolute;
-        inset: auto -120px -120px auto;
+        right: -100px;
+        bottom: -110px;
         width: 360px;
         height: 360px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(243, 215, 157, 0.22), transparent 62%);
+        background: radial-gradient(circle, rgba(217,172,85,0.28), transparent 62%);
       }
       .hero-grid {
-        display: grid;
-        grid-template-columns: 1.4fr 0.8fr;
-        gap: 32px;
-        align-items: center;
         position: relative;
         z-index: 1;
+        display: grid;
+        grid-template-columns: 1.45fr 0.8fr;
+        gap: 34px;
+        align-items: center;
       }
       .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 12px;
+        display: inline-block;
+        padding: 9px 12px;
         border-radius: 999px;
         background: rgba(255,255,255,0.08);
-        border: 1px solid rgba(255,255,255,0.12);
-        color: #f3d79d;
-        font-size: 11px;
-        font-weight: 700;
+        border: 1px solid rgba(255,255,255,0.14);
+        color: var(--gold-soft);
         letter-spacing: 0.12em;
         text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 700;
       }
       .hero h1 {
-        margin: 20px 0 12px;
+        margin: 20px 0 14px;
         font-size: clamp(38px, 5vw, 72px);
         line-height: 0.96;
         letter-spacing: -0.06em;
@@ -136,26 +134,51 @@
       }
       .hero p {
         margin: 0;
-        color: rgba(255,255,255,0.78);
-        line-height: 1.8;
+        max-width: 680px;
+        color: rgba(255,255,255,0.82);
         font-size: 16px;
-        max-width: 700px;
+        line-height: 1.8;
       }
-
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 22px;
+      }
+      .hero-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 18px;
+        border-radius: 12px;
+        font-size: 13px;
+        font-weight: 800;
+        transition: transform 0.2s ease;
+      }
+      .hero-btn:hover { transform: translateY(-1px); }
+      .hero-btn.primary {
+        background: var(--gold);
+        color: #1f2b36;
+      }
+      .hero-btn.secondary {
+        background: rgba(255,255,255,0.05);
+        color: white;
+        border: 1px solid rgba(255,255,255,0.16);
+      }
       .hero-panel {
         background: rgba(255,255,255,0.06);
         border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 24px;
-        padding: 22px;
-        box-shadow: 0 18px 38px rgba(9, 18, 27, 0.25);
+        border-radius: 28px;
+        padding: 26px 22px;
+        box-shadow: 0 18px 42px rgba(9,18,27,0.2);
       }
       .stat-number {
         display: block;
+        font-size: clamp(44px, 5vw, 65px);
         font-weight: 800;
-        font-size: clamp(44px, 5vw, 64px);
         line-height: 1;
-        color: #f4d992;
         letter-spacing: -0.06em;
+        color: var(--gold-soft);
       }
       .stat-label {
         margin-top: 12px;
@@ -163,33 +186,9 @@
         line-height: 1.7;
         font-size: 14px;
       }
-      .hero-actions {
-        margin-top: 18px;
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-      }
-      .hero-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 18px;
-        border-radius: 12px;
-        font-size: 13px;
-        font-weight: 800;
-      }
-      .hero-btn.primary {
-        background: var(--gold);
-        color: #1f2b36;
-      }
-      .hero-btn.secondary {
-        color: white;
-        border: 1px solid rgba(255,255,255,0.18);
-        background: rgba(255,255,255,0.06);
-      }
 
       .content {
-        padding: 56px 0 96px;
+        padding: 54px 0 96px;
       }
       .toolbar {
         display: flex;
@@ -206,17 +205,18 @@
       }
       .search-box input {
         width: 100%;
-        border: 1px solid rgba(18, 60, 98, 0.12);
-        background: rgba(255,255,255,0.8);
+        border: 1px solid rgba(18,60,98,0.12);
+        background: rgba(255,255,255,0.84);
         border-radius: 14px;
-        box-shadow: 0 10px 24px rgba(18, 60, 98, 0.04);
+        box-shadow: 0 10px 24px rgba(18,60,98,0.04);
         padding: 15px 18px 15px 48px;
+        border: 1px solid rgba(18,60,98,0.1);
         color: var(--ink);
         outline: none;
         font-size: 15px;
       }
       .search-box input:focus {
-        border-color: rgba(18,60,98,0.28);
+        border-color: rgba(18,60,98,0.26);
         box-shadow: 0 0 0 4px rgba(18,60,98,0.06);
       }
       .search-icon {
@@ -233,26 +233,27 @@
         gap: 10px;
       }
       .tab {
-        border: 1px solid rgba(18, 60, 98, 0.12);
-        background: rgba(255,255,255,0.68);
+        border: 1px solid rgba(18,60,98,0.12);
+        background: rgba(255,255,255,0.82);
         color: var(--navy);
         border-radius: 999px;
         padding: 10px 14px;
         font-size: 12px;
         font-weight: 700;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
       .tab:hover { transform: translateY(-1px); }
       .tab.active {
         background: var(--navy);
         border-color: var(--navy);
         color: white;
+        box-shadow: 0 10px 18px rgba(18,60,98,0.12);
       }
       .counter {
-        background: rgba(255,255,255,0.8);
         box-shadow: 0 10px 24px rgba(18, 60, 98, 0.04);
         border: 1px solid rgba(18,60,98,0.08);
+        background: rgba(255,255,255,0.88);
         color: var(--navy);
         border-radius: 999px;
         padding: 10px 14px;
@@ -262,27 +263,28 @@
 
       .book-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-        gap: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
       }
       .book-card {
         position: relative;
-        background: rgba(255,255,255,0.75);
-        border: 1px solid rgba(18, 60, 98, 0.08);
-        border-radius: 22px;
+        background: rgba(255,255,255,0.82);
+        border: 1px solid rgba(18,60,98,0.08);
+        border-radius: 26px;
         overflow: hidden;
         box-shadow: var(--shadow);
         transition: transform 0.25s ease, box-shadow 0.25s ease;
       }
       .book-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 28px 60px rgba(15, 38, 60, 0.12);
+        box-shadow: 0 28px 64px rgba(15,38,60,0.12);
       }
       .book-cover {
         width: 100%;
-        height: 260px;
+        height: 270px;
         object-fit: cover;
         display: block;
+        background: #dde9f1;
       }
       .book-body {
         padding: 18px 18px 20px;
@@ -298,8 +300,9 @@
       .book-card h3 {
         margin: 12px 0 8px;
         font-size: 1.35rem;
-        line-height: 1.25;
+        line-height: 1.22;
         letter-spacing: -0.04em;
+        color: var(--ink);
       }
       .book-author {
         margin: 0 0 12px;
@@ -315,8 +318,8 @@
       }
       .book-actions {
         display: flex;
-        flex-wrap: wrap;
         gap: 10px;
+        flex-wrap: wrap;
       }
       .btn {
         display: inline-flex;
@@ -324,8 +327,8 @@
         justify-content: center;
         padding: 11px 14px;
         border-radius: 10px;
-        font-weight: 800;
         font-size: 12px;
+        font-weight: 800;
         transition: transform 0.2s ease;
       }
       .btn:hover { transform: translateY(-1px); }
@@ -341,19 +344,21 @@
 
       .empty-state {
         width: 100%;
-        background: rgba(255,255,255,0.8);
+        background: rgba(255,255,255,0.85);
         border: 1px solid rgba(18,60,98,0.08);
-        border-radius: 22px;
+        border-radius: 24px;
         padding: 28px 20px;
         box-shadow: var(--shadow);
         color: var(--muted);
       }
-      .empty-state h3 { margin: 0 0 8px; color: var(--ink); }
+      .empty-state h3 {
+        margin: 0 0 8px;
+        color: var(--ink);
+      }
 
       @media (max-width: 760px) {
         .hero-grid { grid-template-columns: 1fr; }
         .topbar-inner { min-height: 68px; }
-        .brand { font-size: 18px; }
       }
     </style>
   </head>
@@ -438,7 +443,6 @@
 
       function renderBooks() {
         const keyword = searchInput.value.trim().toLowerCase();
-
         const filtered = allBooks.filter((book) => {
           const matchKeyword = !keyword ||
             book.title.toLowerCase().includes(keyword) ||
